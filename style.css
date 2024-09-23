@@ -1,0 +1,116 @@
+:root {
+  --purple: #6e38e0;
+  --orange: #ff5f36;
+  --darkBlack: #151515;
+  --lightBlack: #282828;
+  --black: #1e1e1e;
+  --green: #00b85e;
+  --BrightYellow: #ffd928;
+  --yellow: #eab04d;
+  --darkYellow: #eab14d41;
+  --silver: #898989;
+  --white: #ffffff;
+  --darkBlue: #2bc7ee41;
+  --blue: #29c5ee;
+  --GreenishBlue: #19c8a7;
+  --darkGreenishBlue: #19c8a841;
+  --darkRed: #d11a2c41;
+  --red: #cf1a2c;
+  --lightSilver: #9388893c;
+  --font-family: "Urbanist", sans-serif;
+  --radius: 16px;
+  --semiBold: 600;
+  --border-left: 6px;
+  --header-height: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--darkBlack);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: var(--header-height) calc(100vh - var(--header-height));
+}
+
+header {
+  display: flex;
+  grid-column: span 2;
+
+  .brand {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-right: 2px solid var(--lightSilver);
+    padding-left: 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    padding: 0px 30px;
+
+    .textbox {
+      background-color: var(--lightBlack);
+      width: 300px;
+      height: 60%;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    
+      input {
+        width: 80%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        color: var(--white);
+
+        &:focus-visible {
+          outline: none;
+        }
+      }
+      i {
+        color: var(--silver);
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .action-btn {
+        background-color: var(--lightBlack);
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        
+        &:hover {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+aside {
+}
+
+main {
+}
